@@ -4,7 +4,7 @@ This project was bootstrapped with `Create React App`.
 
 ## Running the project locally
 
-First, run `npm install` all npm packages.
+First, run `npm install` to install all npm packages.
 
 Then, run `npm run start`.
 
