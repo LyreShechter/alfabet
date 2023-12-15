@@ -1,0 +1,4 @@
+.all-players-content {
+    display: flex;
+    flex-direction: column;
+}
