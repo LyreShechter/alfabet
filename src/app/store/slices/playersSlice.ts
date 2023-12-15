@@ -8,6 +8,7 @@ type PlayersState = {
 const initialState: PlayersState = {
   data: [],
 };
+
 const playersSlice = createSlice({
   name: "players",
   initialState,

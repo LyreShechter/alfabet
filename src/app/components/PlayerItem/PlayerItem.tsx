@@ -10,19 +10,17 @@ export function PlayerItem(props: PlayerItemProps) {
   const { player, ...rest } = props;
   const { first_name, last_name, isFavorite, id } = player;
 
-  const disptach = useDispatch();
+  const dispatch = useDispatch();
 
   const fullname = `${first_name} ${last_name}`;
 
+  function onToggleFavorite() {
+    dispatch(toggleFavorite({ playerId: id, isFavorite: !isFavorite }));
+  }
+
   return (
     <div {...rest}>
-      <input
-        type="checkbox"
-        checked={isFavorite}
-        onClick={() =>
-          disptach(toggleFavorite({ playerId: id, isFavorite: !isFavorite }))
-        }
-      />
+      <input type="checkbox" checked={isFavorite} onClick={onToggleFavorite} />
       {fullname}
     </div>
   );
